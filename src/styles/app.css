@@ -303,7 +303,7 @@
   .section-motion-graphic {
     @apply flex;
     @apply justify-center;
-    @apply h-full;
+    /* @apply h-full; */
   }
   
   .bg-program-design {
