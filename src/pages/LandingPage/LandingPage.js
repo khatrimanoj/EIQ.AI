@@ -107,6 +107,7 @@ const LandingPage = () => {
             <div className="section-motion-graphic">
               <ReactPlayer
                 url={videoRatings}
+                playsinline
                 loop={true}
                 muted={true}
                 playing={true}
@@ -123,6 +124,7 @@ const LandingPage = () => {
             <div className="section-motion-graphic w-full self-center">
               <ReactPlayer
                 url={videoDueDiligence}
+                playsinline
                 loop={false}
                 muted={true}
                 playing={true}
@@ -182,6 +184,7 @@ const LandingPage = () => {
             <div className="section-motion-graphic">
               <ReactPlayer
                 url={videoRiskAssessment}
+                playsinline
                 loop={true}
                 muted={true}
                 playing={true}
@@ -238,6 +241,7 @@ const LandingPage = () => {
             <div className="section-motion-graphic">
               <ReactPlayer
                 url={videoIncidentAlert}
+                playsinline
                 loop={true}
                 muted={true}
                 playing={true}
@@ -370,6 +374,7 @@ const LandingPage = () => {
             <div className="section-motion-graphic">
               <ReactPlayer
                 url={videoDigitalLearning}
+                playsinline
                 loop={true}
                 muted={true}
                 playing={true}

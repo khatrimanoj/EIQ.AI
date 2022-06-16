@@ -124,6 +124,9 @@
   .mobile-view .button span {
     position: absolute;
     right: 10px;
+    top: 0;
+    bottom: 0;
+    @apply items-center;
   }
 }
 
