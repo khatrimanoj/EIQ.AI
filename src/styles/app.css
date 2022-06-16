@@ -110,6 +110,10 @@
     background: #fff;
     padding: 0 15px;
     padding-top: 70px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   .mobile-view .button {
     color: #272727;
@@ -301,8 +305,8 @@
   } */
 
   .section-motion-graphic {
-    @apply flex;
-    @apply justify-center;
+    /* @apply flex;
+    @apply justify-center; */
     /* @apply h-full; */
   }
   
