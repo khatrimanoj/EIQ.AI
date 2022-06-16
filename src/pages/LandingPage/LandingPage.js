@@ -140,7 +140,7 @@ const LandingPage = () => {
               <h2 className="section-title-black text-[clamp(1.5rem,2vw,2rem)]">
                 Geographic and product level Supply Chain ESG Risk Ratings for{" "}
               </h2>
-              <div className="section-block-wrapper gap-[0.45rem] sm:gap-[1.5rem]">
+              <div className="section-block-wrapper risk-assesment-gap gap-[0.45rem] sm:gap-[1.5rem]">
                 <SectionBlock number="170+" label="geographies" />
                 <SectionBlock number="350+" label="products and services" />
                 <SectionBlock number="38" label="different issue areas" />

@@ -209,7 +209,7 @@
 /* Section */
 @layer components {
   .section {
-    @apply max-h-fit;
+    /* @apply max-h-fit; */
     @apply flex;
     @apply flex-wrap;
     @apply items-start;
@@ -321,7 +321,13 @@
     }
   }
 }
+.risk-assesment-gap > * + * { margin-left : 0.5rem} 
 
+@supports (gap: 0.5rem) {
+  .risk-assesment-gap {
+    margin: 0 !important;
+  }
+}
 /* Product Ticker */
 @layer components {
   .marquee {
@@ -590,6 +596,7 @@
     @apply max-w-[400px];
     width: calc(100% - 222px);
   }
+  .risk-assesment-gap > * + * { margin-left : 1.5rem}
 }
 
 /* Animation */
