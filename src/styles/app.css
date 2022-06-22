@@ -351,13 +351,16 @@
     border-radius: 8px;
     margin-right: 5px;
   }
-  .marquee .status-text .status.red {
+  .marquee .status-text .status.red,
+  .marquee .status-text .status.color-r {
     background-color: #E32332;
   }
-  .marquee .status-text .status.orange {
+  .marquee .status-text .status.orange,
+  .marquee .status-text .status.color-y {
     background-color: #F26F23;
   }
-  .marquee .status-text .status.yellow {
+  .marquee .status-text .status.yellow,
+  .marquee .status-text .status.color-green {
     background-color: #ffdd02;
   }
 }
