@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
 const ProductTicker = (props) => {
-  const [csvData, setCsvData] = useState([]); 
-  
-  
+  const [csvData, setCsvData] = useState([]);
+
   useEffect(() => {
     const fetchCsv = async () => {
       return await fetch(
@@ -17,19 +16,18 @@ const ProductTicker = (props) => {
         });
     };
     fetchCsv();
-   }, []);
+  }, []);
 
-  
-    const data = (res) => {
-      let data = res.split(/\r?\n/);
-      let d1 = []
-      data.forEach((data) => {
-        let obj = {};
-        const val = data.split(",");
-        d1.push({ ...obj, name: val[0], value: val[1], color: "r" });
-      });
-      setCsvData(d1);
-    };
+  const data = (res) => {
+    let data = res.split(/\r?\n/);
+    let d1 = [];
+    data.forEach((data) => {
+      let obj = {};
+      const val = data.split(",");
+      d1.push({ ...obj, name: val[0], value: val[1], color: "r" });
+    });
+    setCsvData(d1);
+  };
 
    
     const LoopList = () => {

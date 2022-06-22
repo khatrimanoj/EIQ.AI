@@ -27,6 +27,7 @@ import imageSupplier from "src/static/images/image-supplier-monitoring.svg";
 
 import videoDigitalLearning from "src/static/videos/video-digital-learning.mp4";
 import videoDueDiligence from "src/static/videos/video-due-diligence.mp4";
+import videoDueDiligenceMobile from "src/static/videos/due_diligence_workflow_mobile.mp4";
 import videoIncidentAlert from "src/static/videos/video-incident-alert.mp4";
 import videoRatings from "src/static/videos/video-ratings.mp4";
 import videoRiskAssessment from "src/static/videos/video-risk-assessment.mp4";
@@ -121,17 +122,30 @@ const LandingPage = () => {
         <Section
           color="black"
           content={
-            <div className="section-motion-graphic w-full self-center">
-              <ReactPlayer
-                url={videoDueDiligence}
-                playsinline
-                loop={false}
-                muted={true}
-                playing={true}
-                height="100%"
-                width="100%"
-              />
-            </div>
+            <>
+              <div className="section-motion-graphic xs:flex hidden w-full self-center">
+                <ReactPlayer
+                  url={videoDueDiligence}
+                  playsinline
+                  loop={false}
+                  muted={true}
+                  playing={true}
+                  height="100%"
+                  width="100%"
+                />
+              </div>
+              <div className="section-motion-graphic xs:hidden flex w-full self-center">
+                <ReactPlayer
+                  url={videoDueDiligenceMobile}
+                  playsinline
+                  loop={false}
+                  muted={true}
+                  playing={true}
+                  height="100%"
+                  width="100%"
+                />
+              </div>
+            </>
           }
         />
         <div ref={refRiskAssessment} className="scroll-offset"></div>
