@@ -138,7 +138,7 @@ const LandingPage = () => {
                 <ReactPlayer
                   url={videoDueDiligenceMobile}
                   playsinline
-                  loop={false}
+                  loop={true}
                   muted={true}
                   playing={true}
                   height="100%"
