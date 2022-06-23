@@ -356,12 +356,16 @@
     background-color: #E32332;
   }
   .marquee .status-text .status.orange,
-  .marquee .status-text .status.color-y {
+  .marquee .status-text .status.color-o {
     background-color: #F26F23;
   }
   .marquee .status-text .status.yellow,
-  .marquee .status-text .status.color-green {
+  .marquee .status-text .status.color-y {
     background-color: #ffdd02;
+  }
+  .marquee .status-text .status.green,
+  .marquee .status-text .status.color-g {
+    background-color: green;
   }
 }
 
