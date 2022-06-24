@@ -6,7 +6,7 @@ const ProductTicker = (props) => {
   useEffect(() => {
     const fetchCsv = async () => {
       return await fetch(
-        "https://democheck121.s3.ap-south-1.amazonaws.com/Eiqai.ticker_new.csv"
+        "https://s3.ap-southeast-1.amazonaws.com/eiq.ai.tempcsv/Eiqai.ticker_new.csv"
       )
         .then((response) => {
           return response.text();
