@@ -7,7 +7,7 @@ const Button = (props) => {
     <Fragment>
       <a
         href={url}
-        className={`button text-white text-[clamp(1rem,1.25vw,1.125rem)] ${color}`}
+        className={`button text-white text-[clamp(1rem,1.25vw,1rem)] ${color}`}
       >
         {logo ? <img src={logo} alt={alt} className="mr-2 xl:h-20px" /> : null}
         {text ? text : null}

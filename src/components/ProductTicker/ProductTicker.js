@@ -24,7 +24,12 @@ const ProductTicker = (props) => {
     data.forEach((data) => {
       let obj = {};
       const val = data.split(",");
-      d1.push({ ...obj, name: val[0], value: val[1], color: val[2] });
+      d1.push({
+        ...obj,
+        name: val[0],
+        value: parseFloat(val[1]).toFixed(2),
+        color: val[2],
+      });
     });
     setCsvData(d1);
   };

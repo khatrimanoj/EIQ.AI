@@ -29,13 +29,13 @@ const NavLinks = (props) => {
           <span className={`menu ${isOpen ? "cross" : "hamburger"}`}></span>
         </button> */}
       <div className="flex  items-center flex-col xl:flex-row border-t-1 xl:border-0 border-light2">
-        <div className="w-full flex  flex-col xl:flex-row mr-0 xl:mr-4 2xl:mr-8">
+        <div className="w-full flex  flex-col xl:flex-row mr-0 xl:mr-4 2xl:mr-5">
           {navigation.map((nav, index) => (
             // <li key={nav.text}>
             <Disclosure.Button
               key={index}
               onClick={nav.scrollTo}
-              className="main-menu-link border-light2 text-[clamp(1rem,1vw,1.125rem)] whitespace-nowrap p-3 xl:p-2 pl-0 xl:pl-3 2xl:pl-7 text-left xl:text-center border-b xl:border-none "
+              className="main-menu-link border-light2 text-[clamp(1rem,1vw,1rem)] whitespace-nowrap p-3 xl:p-2 pl-0 xl:pl-2 2xl:pl-7 text-left xl:text-center border-b xl:border-none "
             >
               {nav.text}
             </Disclosure.Button>
@@ -50,7 +50,7 @@ const NavLinks = (props) => {
           logo={logoEiQAnalyze}
           alt="EiQ Analyze"
           text="Analyze"
-          color="bg-white text-black flex hover:bg-white items-center xl:gray mr-0 rounded-none xl:rounded-2xl xl:mr-15px border-light2 border-b xl:border-none py-3 xl:py-2 px-0 xl:px-15px"
+          color="bg-white text-black flex hover:bg-white items-center xl:gray mr-0 rounded-none xl:rounded-2xl xl:mr-10px border-light2 border-b xl:border-none py-3 xl:py-2 px-0 xl:px-15px 2xl:px-30px"
         >
           <span className="flex xl:hidden">
             <img src={iconChevron} alt="chevron icon" />
@@ -61,7 +61,7 @@ const NavLinks = (props) => {
           logo={logoEiQAnalyze}
           alt="EiQ Assess"
           text="Assess"
-          color="bg-white text-black flex hover:bg-white items-center xl:gray mr-0 rounded-none xl:rounded-2xl xl:mr-15px  border-light2 border-b xl:border-none py-3 xl:py-2 px-0 xl:px-15px"
+          color="bg-white text-black flex hover:bg-white items-center xl:gray mr-0 rounded-none xl:rounded-2xl xl:mr-10px  border-light2 border-b xl:border-none py-3 xl:py-2 px-0 xl:px-15px 2xl:px-30px"
         >
           <span className="flex xl:hidden">
             <img src={iconChevron} alt="chevron icon" />
@@ -72,7 +72,7 @@ const NavLinks = (props) => {
           logo={logoEiQAnalyze}
           alt="EiQ Learn"
           text="Learn"
-          color="bg-white text-black flex hover:bg-white items-center xl:gray rounded-none xl:rounded-2xl px-0 py-3 xl:py-2 xl:px-15px"
+          color="bg-white text-black flex hover:bg-white items-center xl:gray rounded-none xl:rounded-2xl px-0 py-3 xl:py-2 xl:px-15px 2xl:px-30px"
         >
           <span className="flex xl:hidden">
             <img src={iconChevron} alt="chevron icon" />

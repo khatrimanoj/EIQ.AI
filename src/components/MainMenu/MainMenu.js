@@ -18,9 +18,9 @@ const MainMenu = (props) => {
         {({ open }) => (
           <>
             <div className=" mx-auto border-b-1 xl:border-b-0 border-custom-gray">
-              <div className="z-10 bg-white w-full px-3 pt-2 relative flex items-center justify-end h-16">
+              <div className="z-10 bg-white w-full px-3 py-4 relative flex items-center justify-end">
                 <div className="">
-                  <img src={logoEiQ} alt="EiQ" className="w-20" />
+                  <img src={logoEiQ} alt="EiQ" className="w-32" />
                 </div>
                 <div className="absolute inset-y-0  flex items-center xl:hidden">
                   {/* Mobile menu button*/}
