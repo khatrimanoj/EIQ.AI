@@ -25,6 +25,9 @@ import iconSupplier from "src/static/icons/icon-supplier.svg";
 
 import imageSupplier from "src/static/images/image-supplier-monitoring.svg";
 
+import heroBannerDesktop from "src/static/images/hero-image-desktop.png";
+import heroBannerMobile from "src/static/images/hero-image-mobile.png";
+
 import videoDigitalLearning from "src/static/videos/video-digital-learning.mp4";
 import videoDueDiligence from "src/static/videos/video-due-diligence.mp4";
 import videoDueDiligenceMobile from "src/static/videos/due_diligence_workflow_mobile.mp4";
@@ -69,6 +72,18 @@ const LandingPage = () => {
         {/* <img src={productTicker} alt="product ticker"/> */}
         {/* <StatisticsBar /> */}
         <div ref={refRatings} className="scroll-offset"></div>
+        <div className="heroBanner">
+          <img
+            src={heroBannerDesktop}
+            alt="hero banner"
+            className="xs:flex hidden"
+          />
+          <img
+            src={heroBannerMobile}
+            alt="hero banner"
+            className="xs:hidden flex"
+          />
+        </div>
         <SectionHalf
           left={
             <Fragment>
