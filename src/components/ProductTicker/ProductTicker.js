@@ -27,7 +27,7 @@ const ProductTicker = (props) => {
       d1.push({
         ...obj,
         name: val[0],
-        value: val[1],
+        value: parseFloat(val[1]).toFixed(2),
         color: val[2],
       });
     });
