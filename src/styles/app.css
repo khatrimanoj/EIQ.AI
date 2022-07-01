@@ -342,7 +342,6 @@
     @apply overflow-hidden;
     @apply mx-15px;
     border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
   }
   .marquee .status-text .status {
     width: 8px;
@@ -542,6 +541,25 @@
 #footer-hubspot-form label.hs-error-msg {
   @apply text-red;
   @apply text-[1rem];
+}
+
+/* Arrow & Hover Animation */
+svg path {
+  fill: #ec8b04;
+  transition: all 0.2s ease-out;
+}
+.banner-btn:hover svg path.arrow-bottom {
+  transform: translateY(-5px);
+}
+.banner-btn:hover svg path.arrow-top {
+  transform: translateY(5px);
+}
+
+svg path.arrow-middle {
+  opacity: 0.75;
+}
+svg path.arrow-top {
+  opacity: 0.5;
 }
 
 @screen mdlmax {

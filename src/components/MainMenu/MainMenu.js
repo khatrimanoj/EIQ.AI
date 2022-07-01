@@ -14,7 +14,10 @@ const MainMenu = (props) => {
   } = props;
   return (
     <>
-      <Disclosure as="nav" className="bg-white sticky top-0 left-0 z-10">
+      <Disclosure
+        as="nav"
+        className="bg-white sticky top-0 left-0 z-10 max-w-screen-2xl mx-auto w-full"
+      >
         {({ open }) => (
           <>
             <div className=" mx-auto border-b-1 xl:border-b-0 border-custom-gray">

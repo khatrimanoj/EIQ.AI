@@ -15,7 +15,7 @@ const SectionHalf = ({
 
   return (
     <div
-      className={`section justify-between gap-y-5 gap-x-3 px-15px py-20px sm:px-30px md-px-40px lg-px-60px xl:px-90px md:py-[40px] xl:py-60px ${sectionColor} ${sectionDirection} ${sectionBgImage} ${centerAlign}`}
+      className={`section max-w-screen-2xl mx-auto justify-between gap-y-5 gap-x-3 px-15px py-20px sm:px-30px md-px-40px lg-px-60px xl:px-90px md:py-[40px] xl:py-60px ${sectionColor} ${sectionDirection} ${sectionBgImage} ${centerAlign}`}
     >
       {left && <div className="md:w-[49%] w-full">{left}</div>}
       {right && <div className="md:w-[49%] w-full">{right}</div>}

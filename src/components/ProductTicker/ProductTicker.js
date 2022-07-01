@@ -48,12 +48,12 @@ const ProductTicker = (props) => {
                     key={i}
                     className="inline-flex items-center text-1xl mx-4"
                   >
-                    <span className="text-[clamp(0.813rem,1.5vw,0.935rem)] pr-10px">
+                    <span className="text-[clamp(0.813rem,1.5vw,0.935rem)] text-white pr-10px">
                       {e.name}
                     </span>
                     <div className="status-text flex items-center">
                       <span className={"status color-" + e.color}></span>
-                      <span className="text-[clamp(0.813rem,1.5vw,0.935rem)] custom-black">
+                      <span className="text-[clamp(0.813rem,1.5vw,0.935rem)] text-white">
                         {e.value}
                       </span>
                     </div>
@@ -66,8 +66,8 @@ const ProductTicker = (props) => {
     };
 
   return (
-    <>
-      <div className="marquee border-t-0 xl:border-t-1 relative flex overflow-x-hidden">
+    <div className='absolute w-full'>
+      <div className="marquee max-w-screen-2xl mx-auto w-full border-t-0 xl:border-t-1 relative flex overflow-x-hidden">
         <div className="py-2 animate-marquee whitespace-nowrap">
           <LoopList />
         </div>
@@ -75,7 +75,7 @@ const ProductTicker = (props) => {
           <LoopList />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

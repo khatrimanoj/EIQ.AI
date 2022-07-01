@@ -5,7 +5,9 @@ const Section = ({ center, color, content }) => {
   const centerAlign = center ? 'items-center' : '';
 
   return (
-    <div className={`section gap-y-5 gap-x-3 px-15px py-20px sm:px-30px md-px-40px lg-px-60px xl:px-90px md:py-[40px] xl:py-60px ${color} ${centerAlign}` }>
+    <div
+      className={`section max-w-screen-2xl mx-auto gap-y-5 gap-x-3 px-15px py-20px sm:px-30px md-px-40px lg-px-60px xl:px-90px md:py-[40px] xl:py-60px ${color} ${centerAlign}`}
+    >
       {content}
     </div>
   );

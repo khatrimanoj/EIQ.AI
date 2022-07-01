@@ -4,6 +4,7 @@ import ReactPlayer from "react-player";
 import Button from "src/components/Button";
 import Footer from "src/components/Footer";
 import Link from "src/components/Link";
+import HeroBanner from "src/components/HeroBanner";
 import MainMenu from "src/components/MainMenu";
 import ProductTicker from "src/components/ProductTicker";
 import {
@@ -25,9 +26,6 @@ import iconSupplier from "src/static/icons/icon-supplier.svg";
 
 import imageSupplier from "src/static/images/image-supplier-monitoring.svg";
 
-import heroBannerDesktop from "src/static/images/hero-image-desktop.png";
-import heroBannerMobile from "src/static/images/hero-image-mobile.png";
-
 import videoDigitalLearning from "src/static/videos/video-digital-learning.mp4";
 import videoDueDiligence from "src/static/videos/video-due-diligence.mp4";
 import videoDueDiligenceMobile from "src/static/videos/due_diligence_workflow_mobile.mp4";
@@ -46,6 +44,7 @@ const LandingPage = () => {
   const refCapacityBuilding = useRef(null);
 
   const scrollToRefRatings = () => refRatings.current.scrollIntoView();
+  const scrollDownTO = () => refRatings.current.scrollIntoView();
   const scrollToRefDueDiligence = () =>
     refDueDiligence.current.scrollIntoView();
   const scrollToRefRiskAssessment = () =>
@@ -59,7 +58,7 @@ const LandingPage = () => {
 
   return (
     <Fragment>
-      <div className="flex flex-col max-w-screen-2xl mx-auto">
+      <div className="flex flex-col mx-auto">
         <MainMenu
           scrollToRefRatings={scrollToRefRatings}
           scrollToRefDueDiligence={scrollToRefDueDiligence}
@@ -68,21 +67,11 @@ const LandingPage = () => {
           scrollToRefSupplierMonitoring={scrollToRefSupplierMonitoring}
           scrollToRefCapacityBuilding={scrollToRefCapacityBuilding}
         />
-        <ProductTicker />
-        {/* <img src={productTicker} alt="product ticker"/> */}
-        {/* <StatisticsBar /> */}
-        <div ref={refRatings} className="scroll-offset"></div>
-        <div className="heroBanner">
-          <img
-            src={heroBannerDesktop}
-            alt="hero banner"
-            className="xs:flex hidden"
-          />
-          <img
-            src={heroBannerMobile}
-            alt="hero banner"
-            className="xs:hidden flex"
-          />
+        <div className="relative w-full">
+          <ProductTicker />
+          {/* <StatisticsBar /> */}
+          <div ref={refRatings} className="scroll-offset"></div>
+          <HeroBanner scrollDownTo={scrollDownTO} />
         </div>
         <SectionHalf
           left={
