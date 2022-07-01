@@ -44,7 +44,6 @@ const LandingPage = () => {
   const refCapacityBuilding = useRef(null);
 
   const scrollToRefRatings = () => refRatings.current.scrollIntoView();
-  const scrollDownTO = () => refRatings.current.scrollIntoView();
   const scrollToRefDueDiligence = () =>
     refDueDiligence.current.scrollIntoView();
   const scrollToRefRiskAssessment = () =>
