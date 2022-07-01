@@ -3,6 +3,7 @@ import heroBannerDesktop from "src/static/images/hero-image-desktop.png";
 import heroBannerMobile from "src/static/images/hero-image-mobile.png";
 
 function useMediaQuery(query) {
+
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
@@ -21,6 +22,10 @@ function useMediaQuery(query) {
 }
 
 const HeroBanner = (props) => {
+  const {
+    scrollToRefRatings,
+  } = props;
+  const navigation = [{ text: "Scroll to more", scrollTo: scrollToRefRatings }];
   const bgDesktopImage = {
     width: "100%",
     height: "calc(100vh - 100px)",
@@ -53,34 +58,37 @@ const HeroBanner = (props) => {
           <h1 className="banner-title pt-[40px] text-center flex sm:hidden text-[32px] leading-[42px]">
             The world's first end-to-end supply chain ESG due diligence platform
           </h1>
-          <button
-            type="button"
-            className="banner-btn flex items-center text-[20px] text-[#ec8b04] mt-[40px] outline-none"
-            onClick={props.scrollDownTO}
-          >
-            <svg
-              width="21"
-              height="17"
-              viewBox="0 0 21 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mr-10px"
+          {navigation.map((nav, index) => (
+            <button
+              type="button"
+              key={index}
+              className="banner-btn flex items-center text-[20px] text-[#ec8b04] mt-[40px] outline-none"
+              onClick={nav.scrollTo}
             >
-              <path
-                d="M9.9875 7.41094L0.478125 0.345312L0.876562 0L9.9875 6.72031L19.0984 0L19.5766 0.345312L9.9875 7.41094Z"
-                className="arrow-top"
-              />
-              <path
-                d="M9.9875 12.1656L0.2125 4.96719L1.16875 4.35625L9.9875 10.9438L18.9125 4.35625L19.7891 4.96719L9.9875 12.1656Z"
-                className="arrow-middle"
-              />
-              <path
-                d="M9.9875 17L0 9.58906L1.35469 8.7125L9.9875 15.0875L18.7 8.7125L20.0547 9.58906L9.9875 17Z"
-                className="arrow-bottom"
-              />
-            </svg>
-            Scroll for more
-          </button>
+              <svg
+                width="21"
+                height="17"
+                viewBox="0 0 21 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="mr-10px"
+              >
+                <path
+                  d="M9.9875 7.41094L0.478125 0.345312L0.876562 0L9.9875 6.72031L19.0984 0L19.5766 0.345312L9.9875 7.41094Z"
+                  className="arrow-top"
+                />
+                <path
+                  d="M9.9875 12.1656L0.2125 4.96719L1.16875 4.35625L9.9875 10.9438L18.9125 4.35625L19.7891 4.96719L9.9875 12.1656Z"
+                  className="arrow-middle"
+                />
+                <path
+                  d="M9.9875 17L0 9.58906L1.35469 8.7125L9.9875 15.0875L18.7 8.7125L20.0547 9.58906L9.9875 17Z"
+                  className="arrow-bottom"
+                />
+              </svg>
+              {nav.text}
+            </button>
+          ))}
         </div>
       </div>
     </div>

@@ -70,9 +70,9 @@ const LandingPage = () => {
         <div className="relative w-full">
           <ProductTicker />
           {/* <StatisticsBar /> */}
-          <div ref={refRatings} className="scroll-offset"></div>
-          <HeroBanner scrollDownTo={scrollDownTO} />
+          <HeroBanner scrollToRefRatings={scrollToRefRatings} />
         </div>
+        <div ref={refRatings} className="scroll-offset"></div>
         <SectionHalf
           left={
             <Fragment>
