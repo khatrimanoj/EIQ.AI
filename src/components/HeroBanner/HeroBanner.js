@@ -62,7 +62,7 @@ const HeroBanner = (props) => {
             <button
               type="button"
               key={index}
-              className="banner-btn flex items-center text-[20px] text-[#ec8b04] mt-[40px] outline-none"
+              className="banner-btn flex items-center mb-[80px] sm:mb-0 text-[20px] text-[#ec8b04] mt-[40px] outline-none"
               onClick={nav.scrollTo}
             >
               <svg
