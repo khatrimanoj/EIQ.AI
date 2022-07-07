@@ -1,22 +1,22 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 const ProductTicker = (props) => {
   const [csvData, setCsvData] = useState([]);
 
-  useEffect(() => {
-    const fetchCsv = async () => {
-      return await fetch(
-        "https://s3.ap-southeast-1.amazonaws.com/eiq.ai.tempcsv/Eiqai.ticker_new.csv"
-      )
-        .then((response) => {
-          return response.text();
-        })
-        .then((res) => {
-          data(res);
-        });
-    };
-    fetchCsv();
-  }, []);
+  const fetchCsv = async () => {
+    return await fetch(
+      "https://s3.ap-southeast-1.amazonaws.com/eiq.ai.tempcsv/Eiqai.ticker_new.csv"
+    )
+      .then((response) => {
+        return response.text();
+      })
+      .then((res) => {
+        data(res);
+      });
+  };
+  // useEffect(() => {
+  // }, []);
+  fetchCsv();
 
   const data = (res) => {
     let data = res.split(/\r?\n/);
@@ -67,7 +67,7 @@ const ProductTicker = (props) => {
 
   return (
     <div className='absolute w-full'>
-      <div className="marquee max-w-screen-2xl mx-auto w-full border-t-0 xl:border-t-1 relative flex overflow-x-hidden">
+      <div className="marquee mx-auto w-full border-t-0 xl:border-t-1 relative flex overflow-x-hidden">
         <div className="py-2 animate-marquee whitespace-nowrap">
           <LoopList />
         </div>

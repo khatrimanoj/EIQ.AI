@@ -14,13 +14,10 @@ const MainMenu = (props) => {
   } = props;
   return (
     <>
-      <Disclosure
-        as="nav"
-        className="bg-white sticky top-0 left-0 z-10 max-w-screen-2xl mx-auto w-full"
-      >
+      <Disclosure as="nav" className="bg-white sticky top-[-1px] left-0 z-10">
         {({ open }) => (
           <>
-            <div className=" mx-auto border-b-1 xl:border-b-0 border-custom-gray">
+            <div className=" mx-auto border-b-1 xl:border-b-0 border-custom-gray max-w-screen-2xl mx-auto w-full">
               <div className="z-10 bg-white w-full px-3 py-4 relative flex items-center justify-end">
                 <div className="">
                   <img src={logoEiQ} alt="EiQ" className="w-32" />
