@@ -16,7 +16,7 @@ const ProductTicker = (props) => {
     };
     
   useEffect(() => {
-    fetchCsv();
+    fetchCsv();     
   }, []);
 
   const data = (res) => {
