@@ -3,19 +3,19 @@ import React, { useState, useEffect } from "react";
 const ProductTicker = (props) => {
   const [csvData, setCsvData] = useState([]);
 
-  const fetchCsv = async () => {
-    return await fetch(
-      "https://s3.ap-southeast-1.amazonaws.com/eiq.ai.tempcsv/Eiqai.ticker_new.csv"
-    )
-      .then((response) => {
-        return response.text();
-      })
-      .then((res) => {
-        data(res);
-      });
-  };
-
   useEffect(() => {
+    const fetchCsv = async () => {
+      return await fetch(
+        "https://s3.ap-southeast-1.amazonaws.com/eiq.ai.tempcsv/Eiqai.ticker_new.csv"
+      )
+        .then((response) => {
+          return response.text();
+        })
+        .then((res) => {
+          data(res);
+        });
+    };
+
     fetchCsv();
   }, []);
 
